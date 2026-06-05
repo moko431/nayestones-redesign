@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NAYESTONES | Belgian Fine Jewellery, Handmade in Antwerp</title>
+<!-- BrightBox redesign mockup. Images load from the live Nayestones Shopify CDN (sandbox unavailable this session, so no local asset copies). All copy uses real facts from nayestones.com; review quotes are real Google/Trustpilot testimonials shown on the site. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#f7ebac;
+  --cream-soft:#fbf7e9;
+  --terracotta:#b4593c;
+  --terracotta-dark:#94462e;
+  --ink:#221d18;
+  --ink-soft:#5d554c;
+  --line:#e8e0cd;
+  --white:#fffdf8;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--white);line-height:1.6;overflow-x:clip}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.15}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--terracotta);font-weight:600}
+.btn{display:inline-block;padding:15px 32px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;transition:all .2s}
+.btn-primary{background:var(--terracotta);color:var(--white)}
+.btn-primary:hover{background:var(--terracotta-dark)}
+.btn-ghost{border:1px solid var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--white)}
+
+/* announcement */
+.announce{background:var(--ink);color:var(--cream);font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:9px 16px}
+
+/* header */
+header{position:sticky;top:0;background:var(--white);border-bottom:1px solid var(--line);z-index:50}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 0}
+.nav img{height:54px;width:auto}
+.nav-links{display:flex;gap:clamp(14px,2.4vw,32px);font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.nav-links a{padding:6px 0;border-bottom:2px solid transparent}
+.nav-links a:hover{border-color:var(--terracotta)}
+.nav .btn{padding:12px 22px}
+.nav-burger{display:none;font-size:24px;background:none;border:0;cursor:pointer;color:var(--ink)}
+
+/* hero */
+.hero{background:var(--cream-soft)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:clamp(28px,5vw,72px);padding:clamp(40px,6vw,88px) 0}
+.hero h1{font-size:clamp(36px,4.6vw,62px);margin:18px 0 20px}
+.hero h1 em{font-style:italic;color:var(--terracotta)}
+.hero p{font-size:17px;color:var(--ink-soft);max-width:48ch;margin-bottom:30px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-note{margin-top:22px;font-size:13px;color:var(--ink-soft)}
+.hero-note strong{color:var(--ink)}
+.hero-img{position:relative}
+.hero-img img{width:100%;height:clamp(380px,46vw,620px);object-fit:cover}
+.hero-img figcaption{position:absolute;left:0;bottom:0;background:var(--white);padding:10px 18px;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+
+/* usp bar */
+.usps{border-bottom:1px solid var(--line)}
+.usps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:26px 0}
+.usp{display:flex;align-items:center;gap:13px;font-size:14px}
+.usp svg{flex:0 0 30px;stroke:var(--terracotta);fill:none;stroke-width:1.5}
+.usp b{display:block;font-weight:500}
+.usp span{color:var(--ink-soft);font-size:13px}
+
+/* entry points */
+.paths{padding:clamp(52px,7vw,96px) 0}
+.section-head{max-width:640px;margin-bottom:38px}
+.section-head h2{font-size:clamp(28px,3.4vw,42px);margin-top:12px}
+.paths-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,28px)}
+.path{position:relative;background:var(--cream-soft);display:flex;flex-direction:column}
+.path img{width:100%;height:300px;object-fit:cover}
+.path-body{padding:24px 26px 28px;display:flex;flex-direction:column;flex:1}
+.path h3{font-size:26px;margin-bottom:8px}
+.path p{font-size:14px;color:var(--ink-soft);margin-bottom:18px;flex:1}
+.path a.cta{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:var(--terracotta)}
+.path a.cta:hover{color:var(--terracotta-dark)}
+
+/* story band */
+.story{background:var(--ink);color:var(--cream-soft);padding:clamp(52px,7vw,92px) 0}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:center}
+.story h2{font-size:clamp(28px,3.4vw,42px);color:var(--cream);margin:12px 0 18px}
+.story p{color:#cfc6b4;max-width:52ch}
+.story p + p{margin-top:14px}
+.story .btn{margin-top:26px;border:1px solid var(--cream);color:var(--cream)}
+.story .btn:hover{background:var(--cream);color:var(--ink)}
+.story-stats{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.stat{border-left:2px solid var(--terracotta);padding-left:18px}
+.stat b{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:500;color:var(--cream);display:block;line-height:1.1}
+.stat span{font-size:13px;color:#cfc6b4}
+
+/* reviews */
+.reviews{padding:clamp(52px,7vw,96px) 0;background:var(--cream-soft)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,28px)}
+.review{background:var(--white);padding:30px 28px;border:1px solid var(--line)}
+.stars{color:var(--terracotta);letter-spacing:3px;margin-bottom:14px}
+.review p{font-size:15px;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.5}
+.review footer{margin-top:16px;font-size:13px;color:var(--ink-soft)}
+.review footer b{color:var(--ink);font-weight:500}
+.reviews-foot{margin-top:26px;font-size:14px;color:var(--ink-soft)}
+.reviews-foot a{color:var(--terracotta);font-weight:500}
+
+/* press */
+.press{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 0}
+.press-row{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.press-row span:first-child{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
+.press-row b{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:500;color:var(--ink-soft)}
+
+/* masterclass */
+.masterclass{padding:clamp(52px,7vw,92px) 0}
+.mc-box{background:var(--cream);padding:clamp(34px,5vw,64px);display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(24px,4vw,56px);align-items:center}
+.mc-box h2{font-size:clamp(26px,3vw,38px);margin:12px 0 14px}
+.mc-box p{color:var(--ink-soft);max-width:52ch}
+.mc-form{display:flex;gap:0}
+.mc-form input{flex:1;padding:15px 18px;border:1px solid var(--ink);border-right:0;font-family:inherit;font-size:14px;background:var(--white)}
+.mc-form button{border:0;cursor:pointer;font-family:inherit}
+
+/* showroom */
+.showroom{background:var(--white);padding-bottom:clamp(52px,7vw,96px)}
+.sr-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:center}
+.sr-grid img{width:100%;height:440px;object-fit:cover}
+.sr-grid h2{font-size:clamp(28px,3.4vw,42px);margin:12px 0 16px}
+.sr-grid p{color:var(--ink-soft);max-width:50ch;margin-bottom:14px}
+.sr-meta{font-size:14px;margin:18px 0 26px}
+.sr-meta div{padding:10px 0;border-bottom:1px solid var(--line)}
+.sr-meta b{font-weight:500}
+
+/* footer */
+footer.site{background:var(--ink);color:#cfc6b4;padding:56px 0 28px;font-size:14px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;margin-bottom:40px}
+.foot-grid img{height:60px;width:auto;margin-bottom:16px;background:var(--white);padding:8px}
+.foot-grid h4{color:var(--cream);font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:14px;font-weight:500}
+.foot-grid a{display:block;padding:4px 0}
+.foot-grid a:hover{color:var(--cream)}
+.foot-bottom{border-top:1px solid #3a332b;padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px}
+
+@media (max-width:980px){
+  .hero-grid,.story-grid,.sr-grid,.mc-box{grid-template-columns:1fr}
+  .paths-grid,.reviews-grid{grid-template-columns:1fr 1fr}
+  .usps-grid{grid-template-columns:1fr 1fr;gap:14px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+  .nav-burger{display:block}
+  .hero-img img{height:420px}
+  .sr-grid img{height:320px}
+}
+@media (max-width:640px){
+  .paths-grid,.reviews-grid,.usps-grid{grid-template-columns:1fr}
+  .hero h1{font-size:34px}
+  .nav .btn{display:none}
+  .mc-form{flex-direction:column}
+  .mc-form input{border-right:1px solid var(--ink);margin-bottom:10px}
+}
+</style>
+</head>
+<body>
+
+<div class="announce">Handmade in Antwerp &nbsp;Â·&nbsp; Recycled 18k gold &nbsp;Â·&nbsp; Free worldwide shipping &amp; returns</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="https://nayestones.com/"><img src="https://nayestones.com/cdn/shop/files/logoAVECantwerp_360x.png?v=1750686929" alt="Nayestones Antwerp logo"></a>
+    <nav class="nav-links">
+      <a href="https://nayestones.com/collections/all">Jewellery</a>
+      <a href="https://nayestones.com/collections/bridal-jewellery">Bridal</a>
+      <a href="https://nayestones.com/collections">Collections</a>
+      <a href="https://nayestones.com/pages/customization-process">Custom</a>
+      <a href="https://nayestones.com/pages/showroom">Showroom</a>
+    </nav>
+    <a class="btn btn-primary" href="https://nayestones.com/pages/make-an-appointment">Book an appointment</a>
+    <button class="nav-burger" aria-label="Menu">â˜°</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Belgian sustainable fine jewellery</span>
+      <h1>Stones that seem to <em>float</em>. Made for you, in Antwerp.</h1>
+      <p>Original designs by Natalie Schayes in recycled 18k gold, set with ethical and lab grown diamonds. Each piece is handmade to order by our goldsmiths in Antwerp and sold with a certificate and a 3 year warranty.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://nayestones.com/pages/make-an-appointment">Book your consultation</a>
+        <a class="btn btn-ghost" href="https://nayestones.com/collections/in-stock-1">Shop in stock pieces</a>
+      </div>
+      <p class="hero-note">In our showroom near Brussels or virtually. <strong>Featured in Wallpaper* and Knack Weekend.</strong></p>
+    </div>
+    <figure class="hero-img">
+      <img src="https://nayestones.com/cdn/shop/collections/THE09805_OK.jpg?v=1747229441&width=1100" alt="Nayestones engagement rings worn on hand">
+      <figcaption>Engagement rings</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="usps">
+  <div class="wrap usps-grid">
+    <div class="usp">
+      <svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2 4 7v10l8 5 8-5V7l-8-5z"/><path d="M12 22V12M4 7l8 5 8-5"/></svg>
+      <div><b>Made in Antwerp</b><span>By experienced goldsmiths</span></div>
+    </div>
+    <div class="usp">
+      <svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M21 3l-9 9M21 3h-6m6 0v6"/></svg>
+      <div><b>Recycled 18k gold</b><span>Ethical and lab grown diamonds</span></div>
+    </div>
+    <div class="usp">
+      <svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 2l2.9 6.3 6.6.6-5 4.5 1.5 6.6-6-3.6-6 3.6 1.5-6.6-5-4.5 6.6-.6L12 2z"/></svg>
+      <div><b>3 year warranty</b><span>Certificate of authenticity</span></div>
+    </div>
+    <div class="usp">
+      <svg viewBox="0 0 24 24" width="30" height="30"><path d="M3 7h13v10H3zM16 10h3l2 3v4h-5"/><circle cx="7" cy="17" r="1.6"/><circle cx="18" cy="17" r="1.6"/></svg>
+      <div><b>Free shipping &amp; returns</b><span>Worldwide, taxes included</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="paths">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What brings you here?</span>
+      <h2>Three ways to find your piece</h2>
+    </div>
+    <div class="paths-grid">
+      <article class="path">
+        <img src="https://nayestones.com/cdn/shop/files/KSN00100_720x.jpg?v=1709132930" alt="Heart gold ring in 18k yellow gold paired with heart diamond ring">
+        <div class="path-body">
+          <h3>Bridal</h3>
+          <p>Engagement and wedding rings that don't look like everyone else's. Off-centre diamonds, pear and octagon cuts, in 9, 14 or 18 carat gold. From â‚¬300.</p>
+          <a class="cta" href="https://nayestones.com/collections/bridal-jewellery">Explore bridal â†’</a>
+        </div>
+      </article>
+      <article class="path">
+        <img src="https://nayestones.com/cdn/shop/files/KSN00546.pngV2-min_720x.png?v=1721033532" alt="Nayestones fine jewellery collection piece">
+        <div class="path-body">
+          <h3>Collections</h3>
+          <p>From Petite ComÃ¨te to Art Deco: minimalist pieces designed to be stacked or worn alone. Gifts from â‚¬300, ready to ship from stock.</p>
+          <a class="cta" href="https://nayestones.com/collections">View collections â†’</a>
+        </div>
+      </article>
+      <article class="path">
+        <img src="https://nayestones.com/cdn/shop/files/Nayestone_Custom_design_Jewelry-min_720x.png?v=1721033502" alt="Custom jewellery design process at Nayestones">
+        <div class="path-body">
+          <h3>Custom</h3>
+          <p>Your stone, your story. Design a unique piece with Natalie, from a family heirloom upcycled in new gold to a ring built around your own gemstone.</p>
+          <a class="cta" href="https://nayestones.com/pages/customization-process">Start your project â†’</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap story-grid">
+    <div>
+      <span class="eyebrow">Why Nayestones</span>
+      <h2>Luxury measured in emotion, not opulence</h2>
+      <p>Nayestones was founded in 2017 by designer Natalie Schayes. Every piece is designed in her studio near Brussels and handmade in Antwerp, the heart of the diamond trade since the 15th century.</p>
+      <p>We work with recycled 18k gold, re-cut diamonds and lab grown diamonds made with renewable energy. Conscious jewellery, made to last a lifetime.</p>
+      <a class="btn" href="https://nayestones.com/pages/about-us">Our story</a>
+    </div>
+    <div class="story-stats">
+      <div class="stat"><b>2017</b><span>Founded by Natalie Schayes</span></div>
+      <div class="stat"><b>100%</b><span>Made in Antwerp, Belgium</span></div>
+      <div class="stat"><b>18k</b><span>Recycled gold as standard</span></div>
+      <div class="stat"><b>3 yrs</b><span>Warranty on every order</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Google &amp; Trustpilot reviews</span>
+      <h2>What our clients say</h2>
+    </div>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars">â˜…â˜…â˜…â˜…â˜…</div>
+        <p>"Amazing experience to have a custom made ring for my girlfriend. Professional guidance by Natalie Schayes in her showroom made us pick the right jewelry. Highly recommended."</p>
+        <footer><b>Thomas</b> Â· customized Petite ComÃ¨te ring</footer>
+      </article>
+      <article class="review">
+        <div class="stars">â˜…â˜…â˜…â˜…â˜…</div>
+        <p>"With Natalie, we were able to use historic family jewelry to create something new. We especially appreciated her sustainable approach to upcycling gold."</p>
+        <footer><b>Laurel</b> Â· customized Double C pear ring</footer>
+      </article>
+      <article class="review">
+        <div class="stars">â˜…â˜…â˜…â˜…â˜…</div>
+        <p>"Tailored to my budget, we looked for options from gold to stone type. I always get a quick and friendly response back. Aftercare is also top notch."</p>
+        <footer><b>Iris</b> Â· customized Petite ComÃ¨te ring</footer>
+      </article>
+    </div>
+    <p class="reviews-foot">Read more reviews on <a href="https://www.trustpilot.com/review/nayestones.com">Trustpilot</a> and Google.</p>
+  </div>
+</section>
+
+<section class="press">
+  <div class="wrap press-row">
+    <span>As seen in</span>
+    <b>Wallpaper*</b><b>Knack Weekend</b><b>Le Vif Weekend</b><b>Feeling</b><b>Paris Match</b><b>RTBF</b>
+  </div>
+</section>
+
+<section class="masterclass">
+  <div class="wrap mc-box">
+    <div>
+      <span class="eyebrow">Free gemology masterclass</span>
+      <h2>Learn to read a stone before you buy one</h2>
+      <p>Join our free gemology masterclass and discover how to judge diamonds, gemstones and gold like a professional. You'll also receive new collection previews and showroom invitations.</p>
+    </div>
+    <form class="mc-form" onsubmit="event.preventDefault();this.innerHTML='<p style=\'font-size:15px\'>Thank you. Check your inbox for the masterclass details.</p>';">
+      <input type="email" required placeholder="Your email address" aria-label="Email address">
+      <button class="btn btn-primary" type="submit">Join free</button>
+    </form>
+  </div>
+</section>
+
+<section class="showroom">
+  <div class="wrap sr-grid">
+    <img src="https://nayestones.com/cdn/shop/files/Nayestone_Custom_design_Jewelry-min_720x.png?v=1721033502" alt="Nayestones showroom consultation near Brussels">
+    <div>
+      <span class="eyebrow">Showroom Overijse, south of Brussels</span>
+      <h2>Come and see how the stones move</h2>
+      <p>In the heart of Overijse, our showroom is an intimate space where you can try the collections or imagine a personalised piece with Natalie. Not in Belgium? Book a virtual appointment, or we'll send you videos of the pieces you love.</p>
+      <div class="sr-meta">
+        <div><b>By appointment</b> Â· showroom or virtual</div>
+        <div><b>WhatsApp</b> Â· +32 474 215 608</div>
+        <div><b>Live chat</b> Â· with our jewellery experts</div>
+      </div>
+      <a class="btn btn-primary" href="https://nayestones.com/pages/make-an-appointment">Book an appointment</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="https://nayestones.com/cdn/shop/files/nayestones_logo_fincouleurs_terracota_c3a6c279-55e9-4124-a62d-ef1f95d4abb2_480x.png?v=1750427729" alt="Nayestones logo">
+        <p>Belgian sustainable fine jewellery. Designed near Brussels, handmade in Antwerp.</p>
+      </div>
+      <div>
+        <h4>Help &amp; contact</h4>
+        <a href="https://nayestones.com/pages/popular-questions">Q&amp;A</a>
+        <a href="https://nayestones.com/pages/contact-us">Contact us</a>
+        <a href="https://nayestones.com/pages/find-your-stone-match">Stone guide</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="https://nayestones.com/pages/returns">Shipping &amp; returns</a>
+        <a href="https://nayestones.com/pages/terms-and-conditions">Terms &amp; conditions</a>
+        <a href="https://nayestones.com/pages/privacy-policy">Privacy policy</a>
+      </div>
+      <div>
+        <h4>About</h4>
+        <a href="https://nayestones.com/pages/about-us">About us</a>
+        <a href="https://nayestones.com/blogs/blog">Blog</a>
+        <a href="https://nayestones.com/pages/showroom">Showroom</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>Â© Nayestones 2026 Â· House of Weddings Quality Label</span>
+      <span>Instagram Â· Facebook Â· Pinterest</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
